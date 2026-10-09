@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Agents.AI.Foundry" Version="1.5.0" /><PackageReference Include="Azure.Identity" Version="1.*" /><PackageReference Include="Microsoft.Extensions.AI.Abstractions" Version="10.*" /><PackageReference Include="Microsoft.Extensions.Hosting" Version="10.*" /><PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.*" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+# from 09-back-matter\appendix-c-quick-reference.md:43
+@tool(approval_mode="always_require")  # "never_require" for demos only
+def my_tool(...): ...

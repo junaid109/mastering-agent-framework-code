@@ -1,0 +1,10 @@
+agent-framework==1.21.0
+pytest>=9
+pytest-asyncio>=1.4
+fastapi
+httpx
+flask
+uvicorn
+opentelemetry-sdk
+agent-framework-hosting==1.0.0a261008
+agent-framework-hosting-responses==1.0.0a261008
