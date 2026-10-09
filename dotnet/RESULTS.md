@@ -53,3 +53,10 @@ Upstream csproj files use `ProjectReference` into `src/`, which is NOT in the sn
 
 ## Not verified
 All snippets needing a live model (Foundry/Azure OpenAI, Cosmos DB) are compile-only (NEEDS_MODEL). Foundry package stable is 1.5.0 (preview 1.24.0-preview exists); book text citing "1.24.0" applies to Microsoft.Agents.AI core only.
+
+## Chapter 19 afternoon agents ported to C# (Microsoft.Agents.AI 1.24.0, net10.0, offline)
+| Project | Idea | Status | Evidence |
+|---|---|---|---|
+| a01_bouncer | Function middleware (`AsBuilder().Use`) that blocks by allow-list, argument regex and a human decision, returning the reason as the tool result | PASS_RUNS_OFFLINE | prints `ReadNote=blocked, RunShell=blocked, ReadNote=allowed`; assertions confirm the reasons reached the model |
+| a02_audit_log | Hash-chained log of every tool call, with `Verify()` | PASS_RUNS_OFFLINE | chain verifies; editing one value is detected at entry 0. In C# `next(...)` returns the raw tool value (Python's function middleware sees a list of `Content`) |
+| a03_claim_check | `Recorder` middleware plus a retry loop on a false "saved" claim | PASS_RUNS_OFFLINE | 1 false claim caught, file written on the retry |
