@@ -15,12 +15,16 @@ def make_client(script, **client_kwargs):
     if os.environ.get("BOOK_CLIENT") == "openai-compatible":
         from agent_framework.openai import OpenAIChatCompletionClient
 
-        return OpenAIChatCompletionClient(
+        client = OpenAIChatCompletionClient(
             base_url=os.environ["BOOK_BASE_URL"],
             api_key=os.environ.get("BOOK_API_KEY", "not-needed"),
             model=os.environ["BOOK_MODEL"],
-            **client_kwargs,
         )
+        # The Chat Completions client does not take these in its constructor (the Responses
+        # OpenAIChatClient does); they are plain attributes on every client, so set them here.
+        for name, value in client_kwargs.items():
+            setattr(client, name, value)
+        return client
     return ScriptedChatClient(script, **client_kwargs)
 
 
