@@ -12,7 +12,8 @@ Tested against **Microsoft Agent Framework Python 1.21.0** and **.NET 1.24.0** (
 | Folder | What it holds |
 |---|---|
 | `examples/` | 26 small, runnable programs grouped by chapter. Each runs offline in seconds. |
-| `tests/` | The test suite: **422 passing**, 5 skipped. Each chapter group has a `RESULTS.md` listing every book snippet and its status. |
+| `afternoon/` | Ten small, complete agents from Chapter 19, each under seventy lines (see `afternoon/README.md`). |
+| `tests/` | The test suite: **440 passing**, 5 skipped. Each chapter group has a `RESULTS.md` listing every book snippet and its status. |
 | `support/fake_client.py` | A scripted chat client used by the tests and examples (see below). |
 | `dotnet/` | C# projects: each book snippet compiled and, where possible, run offline; plus 14 official samples built against the 1.24.0 NuGet packages. See `dotnet/RESULTS.md`. |
 | `book_snippets/` | Every Python code block in the book, extracted verbatim (the first line says where it came from), for reference. |
