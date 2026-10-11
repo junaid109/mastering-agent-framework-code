@@ -1,15 +1,9 @@
+# Only GitHub Actions are tracked. Python and NuGet versions are pinned on purpose:
+# the tests and the book describe specific framework releases, so bump them by hand,
+# after running the whole suite and reading the release notes (see AGENTS.md rule 6).
 version: 2
 updates:
-  - package-ecosystem: pip
-    directory: "/"
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 5
   - package-ecosystem: github-actions
     directory: "/"
-    schedule:
-      interval: weekly
-  - package-ecosystem: nuget
-    directory: "/dotnet"
     schedule:
       interval: weekly
