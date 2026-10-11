@@ -163,7 +163,7 @@ opentelemetry-util-http==0.66b1
 orderedmultidict==1.0.2
 packaging==26.3
 pluggy==1.6.0
-portalocker==3.2.0
+portalocker==4.4.0
 posthog==7.67.0
 powerfx==0.0.34
 priority==2.0.0
