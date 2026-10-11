@@ -130,7 +130,7 @@ msrest==0.7.1
 multidict==6.9.1
 numpy==2.5.3
 oauthlib==4.0.0
-ollama==0.5.3
+ollama==0.6.3
 openai==3.26.1
 openai-agents==0.23.1
 openai-chatkit==1.6.5
